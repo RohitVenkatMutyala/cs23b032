@@ -12,3 +12,5 @@ t_message = np.linspace(0, len(data), len(nrz_signal))
 
 fc = 20  #frequency( Hz)
 carrier = np.sin(2 * np.pi * fc * t_message)  #crrier signal 
+
+am_signal = nrz_signal * carrier  #amplitude modulation
