@@ -9,3 +9,6 @@ samples_per_bit = 200
 nrz_signal = np.repeat([1 if bit == 1 else -1 for bit in data], samples_per_bit)
 # time axis for the message 
 t_message = np.linspace(0, len(data), len(nrz_signal))
+
+fc = 20  #frequency( Hz)
+carrier = np.sin(2 * np.pi * fc * t_message)  #crrier signal 
